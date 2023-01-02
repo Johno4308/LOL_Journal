@@ -1,5 +1,8 @@
+import { useChampion } from "./ChampionsData/Champion";
+
 function App() {
-  return <div>test</div>;
+  const { champion } = useChampion();
+  return <div>{JSON.stringify(champion)}</div>;
 }
 
 export default App;
