@@ -1,8 +1,14 @@
+import { Fragment } from "react";
 import { useChampion } from "./ChampionsData/Champion";
 
 function App() {
   const { champion } = useChampion();
-  return <div>{JSON.stringify(champion)}</div>;
+
+  return (
+    <Fragment>
+      <Header />
+    </Fragment>
+  );
 }
 
 export default App;

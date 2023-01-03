@@ -12,3 +12,56 @@ $green: #256579;
 $darkGrey: #6d7a93;
 $lightGrey: #96a0b5;
 $blackish: #2c2f3e;
+
+//border-Radius
+$borderRadius: 3px;
+
+//letter spacing
+$letterspacing: 0.2px;
+
+//spacing
+$spacing-sm: 4px;
+$spacing-md: 6px;
+$spacing-lg: 8px;
+$spacing-xl: 16px;
+
+//heights
+$headerheight: 30px;
+
+//box Shadow
+$boxShadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2),
+  0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1),
+  0 16px 16px rgba(0, 0, 0, 0.05);
+
+//breakpoint easy access for mobile
+@mixin breakpoints($points) {
+  @if $points == xl {
+    //1120px - for mobile
+    @media (min-width: 70em) {
+      @content;
+    }
+  } @else if $points == lg {
+    //1024px
+    @media (min-width: 64em) {
+      @content;
+    }
+  } @else if $points == md {
+    @media (min-width: 48em) {
+      @content;
+    }
+  } @else if $points == md-only {
+    //767px
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $points == sm {
+    //600px
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  } @else if $points == sm-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+}
